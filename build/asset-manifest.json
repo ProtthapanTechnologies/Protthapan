@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Protthapan/static/css/main.536c9bf8.css",
-    "main.js": "/Protthapan/static/js/main.0f08463b.js",
+    "main.js": "/Protthapan/static/js/main.d86c6d8d.js",
     "static/media/WhatsApp Image 2025-02-03 at 15.38.49_9761a00a.jpg": "/Protthapan/static/media/WhatsApp Image 2025-02-03 at 15.38.49_9761a00a.d2cb4995e5f3062e4ba8.jpg",
     "static/media/WhatsApp Image 2025-02-03 at 15.41.17_76cc442a.jpg": "/Protthapan/static/media/WhatsApp Image 2025-02-03 at 15.41.17_76cc442a.0f57e58b78a0e67a67cb.jpg",
     "static/media/Indian_Army_Insignia_round.png": "/Protthapan/static/media/Indian_Army_Insignia_round.a2be6539128baec21ebd.png",
@@ -15,10 +15,10 @@
     "index.html": "/Protthapan/index.html",
     "static/media/hero-bg.svg": "/Protthapan/static/media/hero-bg.2237f2b6be81c21a80a6.svg",
     "main.536c9bf8.css.map": "/Protthapan/static/css/main.536c9bf8.css.map",
-    "main.0f08463b.js.map": "/Protthapan/static/js/main.0f08463b.js.map"
+    "main.d86c6d8d.js.map": "/Protthapan/static/js/main.d86c6d8d.js.map"
   },
   "entrypoints": [
     "static/css/main.536c9bf8.css",
-    "static/js/main.0f08463b.js"
+    "static/js/main.d86c6d8d.js"
   ]
 }
