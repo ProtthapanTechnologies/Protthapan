@@ -49,10 +49,8 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                     <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">Defense Robotics & SDR-Based Solutions</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">Defense Robotics</h2>
                                     <p className="text-md font-medium">
-                                    Development of autonomous robotic systems for defense applications.
-Research in Software-Defined Radio (SDR) for frequency detection and electronic warfare.
 Advanced RF-based communication systems for secure and long-range operations.
                                     </p>
                                 </div>
