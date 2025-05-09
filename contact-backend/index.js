@@ -22,15 +22,15 @@ app.post('/api/contact', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user: "info@protthapan.in",
+      pass: "ponw ctal ccpo ikfm",
     },
     debug: true,
   });
 
   const mailOptions = {
     from: `"${first_name} ${last_name}" <${email}>`,
-    to: process.env.TO_EMAIL,
+    to: 'keshavkantsharma111@gmail.com',
     subject: 'New Contact Form Submission',
     html: `
       <h3>Contact Details</h3>
