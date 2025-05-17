@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   background-color: rgb(249, 249, 249);
-}
+} 
 
 .hero {
   background: url(./images/hero-bg.svg) top center no-repeat;
