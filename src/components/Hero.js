@@ -19,7 +19,7 @@ const Hero = () => {
                             {/* We build digital solutions to help businesses scale */}
                           Our Mission
                             </h1>
-                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500"To become a global leader in unmanned systems
+                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">To become a global leader in unmanned systems
 and AI-powered solutions, empowering defense
 and enterprise sectors with cutting-edge
 technology that enhances security, efficiency, and
