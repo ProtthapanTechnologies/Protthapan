@@ -4,24 +4,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Define CSS variables for light and dark themes */
+:root {
+  --background-color: rgb(249, 249, 249);
+  --text-color: rgb(0, 0, 0);
+  --hero-bg: url(./images/hero-bg.svg);
+  --footer-bg: url(./images/footer.svg);
+  --cta-bg: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url(images/Protthapan-Logo.png);
+}
+
+.dark-mode {
+  --background-color: rgb(0, 0, 0);
+  --text-color: rgb(249, 249, 249);
+  --hero-bg: url(./images/hero-bg-dark.svg); /* Add dark mode-specific images */
+  --footer-bg: url(./images/footer-dark.svg);
+  --cta-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.7)), url(images/Protthapan-Logo.png);
+}
+
+/* Apply dark theme styles */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background-color: rgb(249, 249, 249);
+  background-color: rgb(0, 0, 0); /* Dark background */
+  color: rgb(249, 249, 249); /* Light text color */
 }
 
 .hero {
-  background: url(./images/hero-bg.svg) top center no-repeat;
+  background: url(./images/hero-bg-dark.svg) top center no-repeat; /* Dark mode-specific image */
   background-size: cover;
 }
 
 .footer {
-  background: url(./images/footer.svg) top center no-repeat;
+  background: url(./images/footer-dark.svg) top center no-repeat; /* Dark mode-specific image */
   background-size: cover;
 }
 
 .cta {
-  background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(images/Protthapan-Logo.png) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.7)), url(images/Protthapan-Logo.png) fixed center center;
 }
 
 

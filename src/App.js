@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 // All pages
 import Home from './pages/Home';
+import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import DemoProduct from './pages/DemoProduct';
 
@@ -38,6 +39,7 @@ function App() {
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-demo" element={<DemoProduct />} /> 
           </Routes>
