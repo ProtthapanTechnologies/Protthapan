@@ -18,17 +18,7 @@ const Hero = () => {
                             <h1 className="mb-5 md:text-2xl text-xl font-bold">
                             Who We Are?
                             </h1>
-                            <div className="text-xl font-semibold tracking-tight mb-5">
-                            Protthapan is an innovative drone and robotics
- technology company specializing in the development
- of advanced unmanned systems — including aerial
- (UAV), ground (UGV), and surface (USV) vehicles for
- defense, surveillance, tactical operations, industrial
- inspections, disaster response, and enterprise
- applications. Alongside hardware, Protthapan also
- develops cutting-edge AI-driven software solutions
- for autonomous navigation, mission planning, data
- analysis, and real-time decision support.                            </div>
+                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">Our team is fueled by a shared vision, to engineer intelligent, reliable systems that push the boundaries of what unmanned technology can achieve.</div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                                 <Link to="/contact" className="text-black bg-sky-500 hover:bg-sky-400 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
                                     Learn more
