@@ -3,24 +3,23 @@ import { Link } from 'react-router-dom';
 
 const Cta = () => {
     return ( 
-        <div className="w-full flex items-center justify-center bg-black text-sky-500 cta">
-            <div className="mx-8 w-full h-96 text-center lg:text-left py-16 px-12 flex lg:justify-between items-center">                    
-                <div className="w-full flex flex-col lg:flex-row lg:justify-around">
-                    <div className="mb-4">
-                        <p className="text-2xl md:text-4xl font-bold mb-4">Are you ready to innovate?</p>
-                        <p className="text-lg md:text-2xl">
+        <div className="w-full flex items-center justify-center bg-black text-sky-500 cta animate-fadeInUp min-h-[30vh]">
+            <div className="mx-8 w-full text-center lg:text-left py-16 px-4 md:px-12 flex flex-col lg:flex-row lg:justify-between items-center animate-fadeInUp">
+                <div className="w-full flex flex-col lg:flex-row lg:justify-around items-center">
+                    <div className="mb-4 animate-fadeInUp">
+                        <p className="text-2xl md:text-4xl font-extrabold mb-4">Are you ready to innovate?</p>
+                        <p className="text-lg md:text-2xl text-sky-300">
                             Get in touch and let us build something amazing <span className="font-black">together!</span>
                         </p>
                     </div>
-                    
-                    <div className="w-full lg:w-72 pt-6 lg:mx-12">
+                    <div className="w-full lg:w-72 pt-6 lg:mx-12 animate-scaleIn">
                         <Link 
                             to="/contact" 
-                            className="bg-transparent border border-sky-500 hover:bg-sky-500 hover:text-black text-sky-500 justify-center text-center rounded-lg px-10 py-3 flex items-center group"
+                            className="bg-gradient-to-r from-sky-400 to-sky-600 hover:from-sky-500 hover:to-sky-700 text-black font-bold justify-center text-center rounded-lg px-10 py-3 flex items-center group shadow-xl transition-all duration-300 animate-scaleIn"
                         >
                             Send a message
                             <svg 
-                                className="w-5 h-5 ml-1 group-hover:translate-x-2 duration-500 ease-in" 
+                                className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 viewBox="0 0 20 20" 
                                 fill="currentColor"

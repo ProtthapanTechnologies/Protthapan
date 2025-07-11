@@ -43,4 +43,41 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.7)), url(images/Protthapan-Logo.png) fixed center center;
 }
 
+/* Global transition for smoothness */
+* {
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
 
+/* Keyframe animations for professional appearance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease both;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
