@@ -10,7 +10,7 @@ const Hero = () => {
                 <div>
                     <NavBar />
                 </div>
-                <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 md:px-12 py-16 animate-fadeInUp">
+                <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 md:px-12 py-64 animate-fadeInUp">
                     <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-6 animate-fadeInUp">
                         <h1 className="mb-2 md:text-5xl text-3xl font-extrabold tracking-tight animate-fadeInUp">
                             Who We Are?
