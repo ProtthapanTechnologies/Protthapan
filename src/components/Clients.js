@@ -6,21 +6,20 @@ import protergia from '../images/clients/Indian_Army_Insignia_round.png';
 const clientImage = {
     height: '10rem',
     width: 'auto',
-    mixBlendMode: 'colorBurn',
 };
 
 const Clients = () => {
     return (
-        <div className="mt-8 bg-black animate-fadeInUp min-h-[40vh]">
+        <div className="py-16 bg-white animate-fadeInUp">
             <section>
                 <div className="my-4 py-4">
-                    <h2 className="my-2 text-center text-3xl text-sky-500 uppercase font-bold animate-fadeInUp">
+                    <h2 className="my-2 text-center text-3xl text-gray-900 uppercase font-bold animate-fadeInUp">
                         Our Clients
                     </h2>
                     <div className="flex justify-center mb-4">
-                        <div className="w-24 border-b-4 border-sky-500"></div>
+                        <div className="w-24 border-b-4 border-blue-600"></div>
                     </div>
-                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-sky-500 animate-fadeIn">
+                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-gray-600 animate-fadeIn">
                         Some of our clients.
                     </h2>
                 </div>
@@ -28,31 +27,33 @@ const Clients = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
                         <div
                             style={clientImage}
-                            className="overflow-hidden flex justify-center items-center transition-all ease-in-out opacity-70 hover:opacity-100 w-32 md:w-48 bg-gray-800 rounded-xl shadow-xl animate-scaleIn"
+                            className="overflow-hidden p-4 flex justify-center items-center transition-all ease-in-out opacity-80 hover:opacity-100 transform hover:scale-110 duration-300 w-48 bg-gray-50 rounded-xl shadow-md animate-fadeInUp"
                         >
                             <img
                                 src={kws}
-                                alt="client"
+                                alt="Gujarat Government"
                                 className="object-contain w-full h-full"
                             />
                         </div>
                         <div
                             style={clientImage}
-                            className="overflow-hidden flex justify-center items-center transition-all ease-in-out opacity-70 hover:opacity-100 w-32 md:w-48 bg-gray-800 rounded-xl shadow-xl animate-scaleIn"
+                            className="overflow-hidden p-4 flex justify-center items-center transition-all ease-in-out opacity-80 hover:opacity-100 transform hover:scale-110 duration-300 w-48 bg-gray-50 rounded-xl shadow-md animate-fadeInUp"
+                            style={{ animationDelay: '0.2s' }}
                         >
                             <img
                                 src={protergia}
-                                alt="client"
+                                alt="Indian Army"
                                 className="object-contain w-full h-full"
                             />
                         </div>
                         <div
                             style={clientImage}
-                            className="overflow-hidden flex justify-center items-center transition-all ease-in-out opacity-70 hover:opacity-100 w-32 md:w-48 bg-gray-800 rounded-xl shadow-xl animate-scaleIn"
+                            className="overflow-hidden p-4 flex justify-center items-center transition-all ease-in-out opacity-80 hover:opacity-100 transform hover:scale-110 duration-300 w-48 bg-gray-50 rounded-xl shadow-md animate-fadeInUp"
+                            style={{ animationDelay: '0.4s' }}
                         >
                             <img
                                 src={geps}
-                                alt="client"
+                                alt="Nirma University"
                                 className="object-contain w-full h-full"
                             />
                         </div>

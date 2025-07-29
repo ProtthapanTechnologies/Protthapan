@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import './index.css';
@@ -15,8 +15,20 @@ import DemoProduct from './pages/DemoProduct';
 
 import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
+import Loader from './components/Loader';
 
 function App() {
+  useDocTitle("Protthapan");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500); // Loader will display for 2.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const aos_init = () => {
       AOS.init({
@@ -31,7 +43,9 @@ function App() {
     });
   }, []);
 
-  useDocTitle("Protthapan");
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>

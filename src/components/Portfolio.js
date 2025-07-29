@@ -29,22 +29,22 @@ const Portfolio = () => {
         },
     ];
     return (
-        <div className="my-4 py-12 bg-black text-sky-500 min-h-screen" id='portfolio'>
-            <h2 className="text-center text-4xl font-extrabold uppercase mb-8 animate-fadeInUp">Products</h2>
-            <div className='flex justify-center mb-8'>
-                <div className='w-24 border-b-4 border-sky-500'></div>
+        <div className="my-4 py-16 bg-gray-50 text-gray-800" id='portfolio'>
+            <h2 className="text-center text-4xl font-extrabold uppercase mb-4 animate-fadeInUp">Products</h2>
+            <div className='flex justify-center mb-12'>
+                <div className='w-24 border-b-4 border-blue-600'></div>
             </div>
             <div className="px-4 animate-fadeInUp">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
                     {products.map((product, idx) => (
-                        <div key={product.title} className="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 flex flex-col items-center animate-scaleIn" style={{ animationDelay: `${0.1 * idx}s` }}>
-                            <img alt={product.title} className="rounded-t-2xl w-full h-40 object-cover animate-fadeIn" src={product.img} />
-                            <div className="p-6 flex flex-col items-center">
-                                <h4 className="font-bold text-xl text-center mb-2 animate-fadeInUp">{product.title}</h4>
-                                <p className="text-md font-medium text-center animate-fadeIn" style={{ color: '#bae6fd' }}>{product.desc}</p>
-                                <Link to="/get-demo" className="mt-4 inline-flex items-center justify-center px-6 py-2 text-base font-bold rounded-xl shadow bg-gradient-to-r from-sky-400 to-sky-600 text-black hover:from-sky-500 hover:to-sky-700 transition-all duration-300 animate-scaleIn group">
+                        <div key={product.title} className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center animate-fadeInUp" style={{ animationDelay: `${0.1 * idx}s` }}>
+                            <img alt={product.title} className="rounded-t-2xl w-full h-48 object-cover" src={product.img} />
+                            <div className="p-6 flex flex-col items-center text-center">
+                                <h4 className="font-bold text-m mb-2">{product.title}</h4>
+                                <p className="text-xs font-medium text-gray-600 mb-4 flex-grow">{product.desc}</p>
+                                <Link to="/get-demo" className="mt-auto inline-block bg-blue-600 text-white font-bold px-6 py-2 rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 group">
                                     Schedule Demo
-                                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                                    <svg className="w-4 h-4 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                                 </Link>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 
 const DemoProduct = (props) => {
-    useDocTitle('Protthapan');
+    useDocTitle('Protthapan - Schedule a Demo');
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -19,16 +19,11 @@ const DemoProduct = (props) => {
     const handleChange = (e) => {
         const value = e.target.value;
         const checked = e.target.checked;
-        errors.products = [];
         if (checked) {
             setDemoProducts([...demoProducts, value]);
         } else {
             setDemoProducts(demoProducts.filter((e) => e !== value));
         }
-    };
-
-    const clearErrors = () => {
-        setErrors([]);
     };
 
     const clearInput = () => {
@@ -37,6 +32,9 @@ const DemoProduct = (props) => {
         setEmail('');
         setPhone('');
         setMessage('');
+        // Also reset checkboxes if needed by clearing the form
+        document.getElementById('demoProductForm').reset();
+        setDemoProducts([]);
     };
 
     function sendEmail(e) {
@@ -48,7 +46,8 @@ const DemoProduct = (props) => {
             last_name: lastName,
             email: email,
             phone_number: phone,
-            message: [message, demoProducts],
+            message: message,
+            products: demoProducts.join(', '),
         };
 
         axios
@@ -72,189 +71,89 @@ const DemoProduct = (props) => {
 
     return (
         <>
-            <div>
-                <NavBar />
-            </div>
-            <div id="demo" className="flex justify-center items-center mt-8 w-full bg-black py-12 lg:py-24">
-                <div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
+            <NavBar />
+            <div id="demo" className="flex justify-center items-center w-full bg-gray-50 py-12 lg:py-24 pt-28">
+                <div className="container mx-auto my-8 px-4 lg:px-20 animate-fadeInUp">
                     <form onSubmit={sendEmail} id="demoProductForm">
-                        <div className="w-full bg-gray-800 text-sky-500 p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+                        <div className="w-full bg-white text-gray-800 p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
                             <div className="flex">
-                                <h1 className="font-bold text-center lg:text-left text-sky-500 uppercase text-4xl">Our products</h1>
+                                <h1 className="font-bold text-center lg:text-left text-gray-900 uppercase text-4xl">Request a Demo</h1>
                             </div>
-                            <div className="flex items-center my-4">
-                                <input
-                                    id="checkbox-1"
-                                    aria-describedby="checkbox-1"
-                                    type="checkbox"
-                                    className="bg-gray-700 border-gray-500 focus:ring-3 focus:ring-sky-500 h-4 w-4 rounded"
-                                    value="SurveilRover 4X"
-                                    onChange={handleChange}
-                                />
-                                <label htmlFor="checkbox-1" className="ml-3 text-lg font-medium text-sky-500">
-                                    SurveilRover 4X
-                                </label>
+                            <p className="text-gray-600 my-4">Select the products you are interested in:</p>
+                            
+                            {/* Checkboxes */}
+                            <div className="space-y-4 mb-8">
+                                <div className="flex items-center">
+                                    <input id="checkbox-1" type="checkbox" className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" value="SurveilRover 4X" onChange={handleChange} />
+                                    <label htmlFor="checkbox-1" className="ml-3 text-lg font-medium text-gray-700">SurveilRover 4X</label>
+                                </div>
+                                <div className="flex items-center">
+                                    <input id="checkbox-2" type="checkbox" className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" value="HexaCopter" onChange={handleChange} />
+                                    <label htmlFor="checkbox-2" className="ml-3 text-lg font-medium text-gray-700">HexaCopter</label>
+                                </div>
+                                <div className="flex items-center">
+                                    <input id="checkbox-3" type="checkbox" className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" value="Quadcopter" onChange={handleChange} />
+                                    <label htmlFor="checkbox-3" className="ml-3 text-lg font-medium text-gray-700">Quadcopter</label>
+                                </div>
+                                <div className="flex items-center">
+                                    <input id="checkbox-4" type="checkbox" className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" value="Training and Certification" onChange={handleChange} />
+                                    <label htmlFor="checkbox-4" className="ml-3 text-lg font-medium text-gray-700">Training and Certification</label>
+                                </div>
                             </div>
-                            <div className="flex items-center my-4">
-                                <input
-                                    id="checkbox-2"
-                                    aria-describedby="checkbox-2"
-                                    type="checkbox"
-                                    className="bg-gray-700 border-gray-500 focus:ring-3 focus:ring-sky-500 h-4 w-4 rounded"
-                                    value="HexaCopter"
-                                    onChange={handleChange}
-                                />
-                                <label htmlFor="checkbox-2" className="ml-3 text-lg font-medium text-sky-500">
-                                    HexaCopter
-                                </label>
-                            </div>
-                            <div className="flex items-center my-4">
-                                <input
-                                    id="checkbox-3"
-                                    aria-describedby="checkbox-3"
-                                    type="checkbox"
-                                    className="bg-gray-700 border-gray-500 focus:ring-3 focus:ring-sky-500 h-4 w-4 rounded"
-                                    value="Quadcopter"
-                                    onChange={handleChange}
-                                />
-                                <label htmlFor="checkbox-3" className="ml-3 text-lg font-medium text-sky-500">
-                                    Quadcopter
-                                </label>
-                            </div>
-                            <div className="flex items-center my-4">
-                                <input
-                                    id="checkbox-4"
-                                    aria-describedby="checkbox-4"
-                                    type="checkbox"
-                                    className="bg-gray-700 border-gray-500 focus:ring-3 focus:ring-sky-500 h-4 w-4 rounded"
-                                    value="Training and Certification"
-                                    onChange={handleChange}
-                                />
-                                <label htmlFor="checkbox-4" className="ml-3 text-lg font-medium text-sky-500">
-                                    Training and Certification
-                                </label>
-                            </div>
-                            {errors && <p className="text-red-500 text-sm">{errors.products}</p>}
 
+                            {/* Input Fields */}
                             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
-                                <div>
-                                    <input
-                                        name="first_name"
-                                        className="w-full bg-gray-700 text-sky-500 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                        type="text"
-                                        placeholder="First Name*"
-                                        value={firstName}
-                                        onChange={(e) => setFirstName(e.target.value)}
-                                        onKeyUp={clearErrors}
-                                    />
-                                    {errors && <p className="text-red-500 text-sm">{errors.first_name}</p>}
-                                </div>
-
-                                <div>
-                                    <input
-                                        name="last_name"
-                                        className="w-full bg-gray-700 text-sky-500 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                        type="text"
-                                        placeholder="Last Name*"
-                                        value={lastName}
-                                        onChange={(e) => setLastName(e.target.value)}
-                                        onKeyUp={clearErrors}
-                                    />
-                                    {errors && <p className="text-red-500 text-sm">{errors.last_name}</p>}
-                                </div>
-
-                                <div>
-                                    <input
-                                        name="email"
-                                        className="w-full bg-gray-700 text-sky-500 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                        type="email"
-                                        placeholder="Email*"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        onKeyUp={clearErrors}
-                                    />
-                                    {errors && <p className="text-red-500 text-sm">{errors.email}</p>}
-                                </div>
-
-                                <div>
-                                    <input
-                                        name="phone_number"
-                                        className="w-full bg-gray-700 text-sky-500 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                        type="number"
-                                        placeholder="Phone*"
-                                        value={phone}
-                                        onChange={(e) => setPhone(e.target.value)}
-                                        onKeyUp={clearErrors}
-                                    />
-                                    {errors && <p className="text-red-500 text-sm">{errors.phone_number}</p>}
-                                </div>
+                                <input name="first_name" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="First Name*" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                                <input name="last_name" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="Last Name*" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                                <input name="email" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" placeholder="Email*" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input name="phone_number" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Phone*" value={phone} onChange={(e) => setPhone(e.target.value)} />
                             </div>
                             <div className="my-4">
-                                <textarea
-                                    name="message"
-                                    placeholder="Message*"
-                                    className="w-full h-32 bg-gray-700 text-sky-500 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    onKeyUp={clearErrors}
-                                ></textarea>
-                                {errors && <p className="text-red-500 text-sm">{errors.message}</p>}
+                                <textarea name="message" placeholder="Message*" className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                             </div>
                             <div className="my-2 w-1/2 lg:w-2/4">
-                                <button
-                                    type="submit"
-                                    id="submitBtn"
-                                    className="uppercase text-sm font-bold tracking-wide bg-sky-500 hover:bg-sky-400 text-black p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
-                                >
+                                <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full w-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
                                     Send Message
                                 </button>
                             </div>
                         </div>
                     </form>
-                    <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-gray-800 rounded-2xl">
-                        <div className="flex flex-col text-sky-500">
-                            <div className="flex my-4 w-2/3 lg:w-3/4">
+                    <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-600 text-white rounded-2xl shadow-xl">
+                        <div className="flex flex-col">
+                            <div className="flex my-4 w-full">
                                 <div className="flex flex-col">
                                     <i className="fas fa-map-marker-alt pt-2 pr-2" />
                                 </div>
                                 <div className="flex flex-col">
                                     <h2 className="text-2xl">Office Address</h2>
-                                    <p className="text-gray-400">Ahmedabad, India</p>
+                                    <p className="text-blue-100">Ahmedabad, India</p>
                                 </div>
                             </div>
 
-                            <div className="flex my-4 w-2/3 lg:w-1/2">
+                            <div className="flex my-4 w-full">
                                 <div className="flex flex-col">
                                     <i className="fas fa-phone-alt pt-2 pr-2" />
                                 </div>
-
                                 <div className="flex flex-col">
                                     <h2 className="text-2xl">Call Us</h2>
-                                    <p className="text-gray-400">Tel: 9725661257</p>
+                                    <p className="text-blue-100">Tel: 9725661257</p>
+                                </div>
+                            </div>
 
-                                    <div className="mt-5">
-                                        <h2 className="text-2xl">Send an E-mail</h2>
-                                        <p className="text-gray-400">info@protthapan.in</p>
-                                    </div>
+                            <div className="flex my-4 w-full">
+                                <div className="flex flex-col">
+                                    <i className="fas fa-envelope pt-2 pr-2" />
+                                </div>
+                                <div className="flex flex-col">
+                                    <h2 className="text-2xl">Send an E-mail</h2>
+                                    <p className="text-blue-100">info@protthapan.in</p>
                                 </div>
                             </div>
 
                             <div className="flex my-4 w-2/3 lg:w-1/2">
-                                <a
-                                    href="https://www.linkedin.com/in/protthapan-6202042bb/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="rounded-full flex justify-center bg-gray-700 h-8 text-sky-500 w-8 mx-1 text-center pt-1 hover:bg-sky-500 hover:text-black transition duration-300"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        className="fill-current font-black hover:animate-pulse"
-                                    >
-                                        <circle cx="4.983" cy="5.009" r="2.188"></circle>
-                                        <path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path>
+                                <a href="https://www.linkedin.com/in/protthapan-6202042bb/" target="_blank" rel="noreferrer" className="rounded-full flex justify-center bg-blue-500 h-8 text-white w-8 mx-1 text-center pt-1 hover:bg-white hover:text-blue-600 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current font-black">
+                                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.97v16h4.97v-7.934c0-2.022 1.184-3.111 2.664-3.111 1.476 0 2.444 1.086 2.444 3.111v7.934h4.97v-8.355c0-4.198-2.225-6.145-5.248-6.145-2.522 0-4.198 1.447-4.854 2.866l-.022-.019v-2.36h-4.97v16h4.97v-16z"></path>
                                     </svg>
                                 </a>
                             </div>

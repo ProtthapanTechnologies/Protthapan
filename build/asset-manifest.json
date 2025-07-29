@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d9ab149.css",
-    "main.js": "/static/js/main.974f31fb.js",
+    "main.css": "/static/css/main.308d4dae.css",
+    "main.js": "/static/js/main.96818c59.js",
     "static/media/Black.-1-x-1.jpg": "/static/media/Black.-1-x-1.66680fff98b447b42f7a.jpg",
     "static/media/Screenshot 2025-05-07 155511.png": "/static/media/Screenshot 2025-05-07 155511.88a745ed4f275950580c.png",
     "static/media/WhatsApp Image 2025-02-03 at 15.38.49_9761a00a.jpg": "/static/media/WhatsApp Image 2025-02-03 at 15.38.49_9761a00a.d2cb4995e5f3062e4ba8.jpg",
@@ -11,22 +11,18 @@
     "static/media/Screenshot 2025-05-07 160622.png": "/static/media/Screenshot 2025-05-07 160622.ff69b8c13a8f452ea49a.png",
     "static/media/Screenshot 2025-05-07 162109.png": "/static/media/Screenshot 2025-05-07 162109.86f4f56b98d80ecb3827.png",
     "static/media/Indian_Army_Insignia_round.png": "/static/media/Indian_Army_Insignia_round.a2be6539128baec21ebd.png",
-    "static/media/al-drone.jpg": "/static/media/al-drone.72213e1becf59055c781.jpg",
     "static/media/NIRMA.png": "/static/media/NIRMA.aa236ac34fa28d2eb868.png",
-    "static/media/sdr.png": "/static/media/sdr.6e898652c4fac0c6a6b1.png",
-    "static/media/analysis.jpg": "/static/media/analysis.8c860a5779f536bd2395.jpg",
-    "static/media/certificate.jpg": "/static/media/certificate.02f89249f867fe845dbe.jpg",
     "static/media/GUJARAT_GOV.jpg": "/static/media/GUJARAT_GOV.8c251dc22a6402c689ab.jpg",
     "static/media/footer.svg": "/static/media/footer.f7b67a1234a7ce02c909.svg",
     "static/media/footer-dark.svg": "/static/media/footer-dark.1d977c89dd5f19e4ac09.svg",
     "index.html": "/index.html",
     "static/media/hero-bg.svg": "/static/media/hero-bg.2237f2b6be81c21a80a6.svg",
     "static/media/hero-bg-dark.svg": "/static/media/hero-bg-dark.e618c3f8efec42a58b31.svg",
-    "main.2d9ab149.css.map": "/static/css/main.2d9ab149.css.map",
-    "main.974f31fb.js.map": "/static/js/main.974f31fb.js.map"
+    "main.308d4dae.css.map": "/static/css/main.308d4dae.css.map",
+    "main.96818c59.js.map": "/static/js/main.96818c59.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d9ab149.css",
-    "static/js/main.974f31fb.js"
+    "static/css/main.308d4dae.css",
+    "static/js/main.96818c59.js"
   ]
 }
