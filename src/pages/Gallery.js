@@ -7,7 +7,10 @@ const Gallery = () => {
         { url: 'https://www.youtube.com/embed/5-2DlOoyJb4?si=mZP82cA-VTb6BTQ1', title: 'Protthapan Drone Demo' },
         { url: 'https://www.youtube.com/embed/IOFIUHVI9jk?si=DDjuM5SkoYzhxZFF', title: 'AI-Powered Drone Showcase' },
         { url: 'https://youtube.com/embed/5VNPt_lgJ3o?feature=share', title: 'Surveillance Quadcopter in Action' },
+        { url: 'https://youtu.be/TvZlLhhW2ok?feature=shared', title: 'Gati' },
+
     ];
+    
 
     return (
         <>
