@@ -27,7 +27,7 @@ const Footer = () => {
                     <div className="animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
                         <h4 className="text-xl font-bold text-gray-900">Follow Us</h4>
                         <div className="flex justify-center md:justify-start space-x-4 mt-4">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transform hover:scale-110">
+                            <a href="https://in.linkedin.com/company/protthapan-technologies" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transform hover:scale-110">
                                 <i className="fab fa-linkedin fa-2x"></i>
                             </a>
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-500 transform hover:scale-110">
@@ -45,3 +45,4 @@ const Footer = () => {
 };
 
 export default Footer;
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />

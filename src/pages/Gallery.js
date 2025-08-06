@@ -7,8 +7,10 @@ const Gallery = () => {
         { url: 'https://www.youtube.com/embed/5-2DlOoyJb4?si=mZP82cA-VTb6BTQ1', title: 'Protthapan Drone Demo' },
         { url: 'https://www.youtube.com/embed/IOFIUHVI9jk?si=DDjuM5SkoYzhxZFF', title: 'AI-Powered Drone Showcase' },
         { url: 'https://youtube.com/embed/5VNPt_lgJ3o?feature=share', title: 'Surveillance Quadcopter in Action' },
-        { url: 'https://youtu.be/TvZlLhhW2ok?feature=shared', title: 'Gati' },
-        { url: 'https://youtu.be/bm8kBAFvaio?feature=shared', title: 'swarm' },
+        { url: 'https://www.youtube.com/embed/TvZlLhhW2ok?si=IQuRQNPddpeyhJF3', title: 'Gati' },
+        { url: 'https://www.youtube.com/embed/bm8kBAFvaio?si=NOpuI2Q0kGIhOfwJ', title: 'swarm' },
+        { url: 'https://www.youtube.com/embed/pOvNuh02P_k?si=YclbrvyKVwbHYBYh', title: 'Hexacopter' },
+
     ];
     
 
@@ -21,16 +23,16 @@ const Gallery = () => {
                         <h2 className="text-4xl font-extrabold text-gray-900">Video Gallery</h2>
                         <p className="text-lg text-gray-600 mt-2">See our technology in action.</p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                         {videos.map((video, index) => (
                             <div
                                 key={index}
                                 className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 animate-fadeInUp"
                                 style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
                             >
-                                <div className="aspect-w-16 aspect-h-9">
+                                <div className="relative w-full pt-[100%]">
                                     <iframe
-                                        className="w-full h-full"
+                                        className="absolute top-0 left-0 w-full h-full rounded-xl"
                                         src={video.url}
                                         title={video.title}
                                         frameBorder="0"
@@ -38,9 +40,9 @@ const Gallery = () => {
                                         allowFullScreen
                                     ></iframe>
                                 </div>
-                                <div className="p-6">
+                                {/* <div className="p-6">
                                     <h3 className="font-bold text-xl text-gray-800">{video.title}</h3>
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>

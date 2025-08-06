@@ -10,7 +10,7 @@ const products = [
     name: 'Gati',
     image: require('../images/gati_image.png'),
     short:" High Speed tactical drone",
-    pdf: require('../images/Vajra – Watching Silently. Protecting Constantly..pdf'),
+    pdf: require('../images/gati.jpg'),
   },
        {
     id: 'Vajra',
@@ -82,7 +82,7 @@ const Products = () => {
                     className="inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
                     onClick={e => e.stopPropagation()}
                   >
-                    Download PDF
+                    Download PDF        
                   </a> */}
                 </div>
               </div>

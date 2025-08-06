@@ -4,9 +4,19 @@ import Footer from '../components/Footer';
 import newsIndiaToday from '../images/news-india-today.png';
 import newsTwitter from '../images/news-twitter.png';
 import newsJagran from '../images/news-jagran.png';
+import Aajtal from '../images/aajtak.png';
+
 
 const News = () => {
     const newsArticles = [
+        {
+            title: 'Operation Sindoor: Ahmedabad की कंपनी ने बनाया खास ड्रोन, ग्रेनेड पिन खोलकर करेगा अचूक वार | Aaj Tak',
+            source: 'Aaj Tak',
+            date: 'Jul 25, 2025',
+            url: 'https://x.com/aajtak/status/1948343059563102544?t=1-2oKglgqQHHmqkEmVpqQg&s=09',
+            image: Aajtal,
+            excerpt: 'A young engineer from Ahmedabad has developed an automated drone for grenade detonation, attracting an order of 20 units from the Indian Army. The innovation is expected to enhance operational safety and efficiency.',
+        },
         {
             title: 'Ahmedabad techie builds automated grenade detonation drone, Army orders 20 units',
             source: 'India Today',

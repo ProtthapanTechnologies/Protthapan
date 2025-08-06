@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.af0323cd.css",
-    "main.js": "/static/js/main.47906a35.js",
+    "main.css": "/static/css/main.3fdc1da6.css",
+    "main.js": "/static/js/main.32efc3d6.js",
     "static/media/Black.-1-x-1.jpg": "/static/media/Black.-1-x-1.66680fff98b447b42f7a.jpg",
     "static/media/Screenshot 2025-05-07 155511.png": "/static/media/Screenshot 2025-05-07 155511.88a745ed4f275950580c.png",
     "static/media/WhatsApp Image 2025-02-03 at 15.38.49_9761a00a.jpg": "/static/media/WhatsApp Image 2025-02-03 at 15.38.49_9761a00a.d2cb4995e5f3062e4ba8.jpg",
@@ -14,8 +14,11 @@
     "static/media/Screenshot 2025-05-07 160622.png": "/static/media/Screenshot 2025-05-07 160622.ff69b8c13a8f452ea49a.png",
     "static/media/Screenshot 2025-05-07 162109.png": "/static/media/Screenshot 2025-05-07 162109.86f4f56b98d80ecb3827.png",
     "static/media/news-twitter.png": "/static/media/news-twitter.6f1567f0c8de8a2cc5ce.png",
+    "static/media/NITI_Aayog_logo.svg.png": "/static/media/NITI_Aayog_logo.svg.1a31b2caa42267d7c9d4.png",
+    "static/media/aajtak.png": "/static/media/aajtak.4d4590729c984e690126.png",
     "static/media/Indian_Army_Insignia_round.png": "/static/media/Indian_Army_Insignia_round.a2be6539128baec21ebd.png",
     "static/media/gati.jpg": "/static/media/gati.08518a9457ef5a9502b6.jpg",
+    "static/media/RRU.png": "/static/media/RRU.2dbdd05f1533b90a07d6.png",
     "static/media/NIRMA.png": "/static/media/NIRMA.aa236ac34fa28d2eb868.png",
     "static/media/vajra.png": "/static/media/vajra.f06ab7586e710927f3ac.png",
     "static/media/gati_image.png": "/static/media/gati_image.031a38bfee06c7ab5cec.png",
@@ -25,11 +28,11 @@
     "index.html": "/index.html",
     "static/media/hero-bg.svg": "/static/media/hero-bg.2237f2b6be81c21a80a6.svg",
     "static/media/hero-bg-dark.svg": "/static/media/hero-bg-dark.e618c3f8efec42a58b31.svg",
-    "main.af0323cd.css.map": "/static/css/main.af0323cd.css.map",
-    "main.47906a35.js.map": "/static/js/main.47906a35.js.map"
+    "main.3fdc1da6.css.map": "/static/css/main.3fdc1da6.css.map",
+    "main.32efc3d6.js.map": "/static/js/main.32efc3d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.af0323cd.css",
-    "static/js/main.47906a35.js"
+    "static/css/main.3fdc1da6.css",
+    "static/js/main.32efc3d6.js"
   ]
 }
