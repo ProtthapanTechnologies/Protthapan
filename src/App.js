@@ -12,7 +12,9 @@ import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import DemoProduct from './pages/DemoProduct';
-
+import News from './pages/News';
+import Products from './pages/Products';
+import ProductDetails from './pages/ProductDetails';
 import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import Loader from './components/Loader';
@@ -54,8 +56,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-demo" element={<DemoProduct />} /> 
+            <Route path="/news" element={<News />} />
           </Routes>
         </ScrollToTop>
       </Router>

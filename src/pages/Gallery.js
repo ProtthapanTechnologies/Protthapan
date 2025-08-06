@@ -8,7 +8,7 @@ const Gallery = () => {
         { url: 'https://www.youtube.com/embed/IOFIUHVI9jk?si=DDjuM5SkoYzhxZFF', title: 'AI-Powered Drone Showcase' },
         { url: 'https://youtube.com/embed/5VNPt_lgJ3o?feature=share', title: 'Surveillance Quadcopter in Action' },
         { url: 'https://youtu.be/TvZlLhhW2ok?feature=shared', title: 'Gati' },
-
+        { url: 'https://youtu.be/bm8kBAFvaio?feature=shared', title: 'swarm' },
     ];
     
 

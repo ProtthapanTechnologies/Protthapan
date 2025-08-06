@@ -10,8 +10,9 @@ const NavLinks = () => {
             <HashLink className={linkStyle} smooth to="/#about">About</HashLink>
             <HashLink className={linkStyle} smooth to="/#services">Services</HashLink>
             <HashLink className={linkStyle} smooth to="/gallery">Gallery</HashLink>
-            <HashLink className={linkStyle} smooth to="/#portfolio">Portfolio</HashLink>
+            <HashLink className={linkStyle} to="/news">News</HashLink>
             <HashLink className={linkStyle} to="/contact#contact">Contact Us</HashLink>
+            <HashLink className={linkStyle} smooth to="/products">Products</HashLink>
             <HashLink className={buttonStyle} smooth to="/get-demo#demo">
                 Schedule Demo
             </HashLink>
